@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="holder">
+
+
+    </section>
+
+    <script>
+        let holder = document.getElementById("holder")
+
+        let rockArray = ['Limestone', 'Granite', 'Obsidian', 'Quartz', 'Argillite', 'Sandstone', 'Pumice']
+
+        for (let i = 0; i < rockArray.length; i++) {
+            console.log(rockArray[i])
+            if (i > 7) {
+                i = 0;
+            }
+        }
+
+        for (let i = rockArray.length - 1; i > -1; i = i - 1) {
+            console.log(rockArray[i])
+            if (i < 0) {
+                i = rockArray.length - 1;
+            }
+        }
+
+        for (let i = 0; i < rockArray.length; i++) {
+            console.log(rockArray[i])
+            let divPlus = document.createElement("div")
+            let para = document.createElement("p")
+            para.innerHTML = rockArray[i]
+            //question here：if I change the "Limestone" it still works, and I don't hnow why
+            if (para.innerHTML = "Limestone") {
+                divPlus.append(para)
+            }
+
+            if (i > 7) {
+                i = 0;
+            }
+            
+            holder.append(divPlus)
+        }
+
+    </script>
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,9 @@
+#holder{
+    display: flex;
+    flex-wrap: wrap;
+}
+div{
+    padding: 15px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
